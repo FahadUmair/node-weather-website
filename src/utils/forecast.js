@@ -16,7 +16,8 @@ request({ url,json: true },(error,{body})=>{
         callback(undefined,{
 
             temperature:body.current.temperature,
-            feelslike:body.current.feelslike
+            feelslike:body.current.feelslike,
+            time:body.location.localtime
         })
     
     }
