@@ -2,7 +2,7 @@ const weatherForm=document.querySelector('form')
 const search=document.querySelector('input')
 const messageOne=document.getElementById('message-1')
 const messageTwo=document.getElementById('message-2')
-const div=document.getElementsByClassName("main-content")[0]
+const messageThree=document.getElementById('message-3')
  
 
 weatherForm.addEventListener('submit',(e)=>{
@@ -18,9 +18,9 @@ weatherForm.addEventListener('submit',(e)=>{
         }
         messageOne.textContent=data.location
         messageTwo.textContent='The temperature is '+data.forecast.temperature+'°C. It feels like '+data.forecast.feelslike+'°C'
-        var para=document.createElement("P")
-        para.innerHTML='Last updated: '+data.forecast.time
-        div.appendChild(para)
+        
+        messageThree.textContent='Last updated: '+data.forecast.time
+        
         })
     })
 
